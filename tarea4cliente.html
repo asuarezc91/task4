@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>TIENDA</title>
+    <link href="bitnami.css" media="all" rel="Stylesheet" type="text/css" />
+    <link href="/dashboard/stylesheets/all.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="mainContent">
+        <div id="art1">
+            <h1>Artículo</h1>
+            <label for="">Insertar título</label>
+            <input type="text" id="titulo" name="titulo">
+
+            <label for="">Insertar año</label>
+            <input type="number" id="anio" name="anio">
+
+            <label for="">Insertar número de copias</label>
+            <input type="number" id="numCopias" name="numCopias">
+
+            <label for="">Insertar el género</label>
+            <input type="text" id="genero" name="genero">
+
+            <br>
+            <label for="">Tipo de artículo</label>
+            <select onchange="selectArt()" id="tipoArt">
+            <option value="--">--</option>
+            <option value="disco">Disco</option>
+            <option value="pelicula">Película</option>
+            </select>
+            <br>
+        </div>
+
+        <div id="discoMenu">
+            <label for="">Grupo Artista Principal</label>
+            <input type="text" id="grupoArtistaPrinc" name="grupoArtistaPrinc">
+            <label for="">Productora</label>
+            <input type="text" id="productora" name="productora">
+        </div>
+
+        <div id="peliMenu">
+            <label for="">Director</label>
+            <input type="text" id="director" name="director">
+
+            <label for="">Actor Principal</label>
+            <input type="text" id="actorPrinc" name="actorPrinc">
+
+            <label for="">Actriz Principal</label>
+            <input type="text" id="actrizPrinc" name="actrizPrinc">
+
+            <label for="">Distribuidora</label>
+            <input type="text" id="distribuidora" name="distribuidora">
+        </div>
+    </div>
+    <br>
+    <div id="menu">
+        <button onclick="sendArt()">Enviar artículo a tienda</button>
+        <br>
+    </div>
+    <div class="menuLista">
+        <p>Si queremos insertar el artículo en una posición concreta, rellena el formulario, pon un índice y pulsa el botón </p>
+        <input class="inputLista" type="text" id="indexEn" placeholder="índice" name="indexEn">
+        <button onclick="InsertEn()">Enviar artículo a la tienda</button>
+    </div>
+    <div class="menuLista">
+        <p>Si queremos obtener un elemento por índice: </p>
+        <input class="inputLista" type="number" placeholder="índice" id="getElement" name="getElement">
+        <button onclick="GetElement()">Obtener elemento por índice</button>
+    </div>
+
+    <div class="menuLista">
+        <p>1) Rellenar el formulario para el artículo 2) Pulsar sobre el botón --> </p>
+        <button onclick="GetIndex()">Obtener índice del artículo</button>
+    </div>
+
+    <div class="menuLista">
+        <input class="inputLista" placeholder="índice" type="number" id="Delete" name="Delete">
+        <button onclick="Delete()">Borrar elemento por índice</button>
+    </div>
+
+    <div class="menuLista">
+        <p>1) Rellenar el formulario para el artículo 2) Pulsar sobre el botón --> </p>
+        <button onclick="DeleteElement()">Borrar elemento indicado</button>
+    </div>
+
+    <div id="shopMenu">
+        <div id="buscador" class="box">
+            <h1>Buscador de artículos</h1>
+            <label for="">Título</label>
+            <input type="text" id="tittleSearch" name="tittleSearch">
+            <label for="">Año</label>
+            <input type="text" id="yearSearch" name="yearSearch">
+            <button onclick="SearchArt()">Buscar</button>
+        </div>
+        <div class="box">
+            <h1>Borrador de artículos</h1>
+            <label for="">Título</label>
+            <input type="text" id="tittleDelete" name="tittleDelete">
+            <label for="">Año</label>
+            <input type="text" id="yearDelete" name="yearDelete">
+            <button onclick="DeleteArt()">Borrar</button>
+        </div>
+        <div class="box">
+            <h1>Ordenar artículos alfabéticamente</h1>
+            <button onclick="ordenAlmacen()">Ordenar</button>
+        </div>
+        <div class="box">
+            <h1>Mostrar almacén</h1>
+            <button onclick="muestraAlmacen()">Almacén</button>
+        </div>
+    </div>
+    <script src="lista.js"></script>
+    <script src="articulo.js"></script>
+    <script src="pelicula.js"></script>
+    <script src="disco.js"></script>
+    <script src="tienda.js"></script>
+    <script src="principal.js"></script>
+    <script>
+    </script>
+</body>
+
+</html>

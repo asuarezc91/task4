@@ -1,0 +1,80 @@
+html,
+body,
+#mainCont {
+    background: #424858;
+}
+
+p {
+    color: white;
+}
+
+input {
+    width: 50% !important;
+    margin: 5px !important;
+}
+
+select {
+    width: 50% !important;
+    margin: 5px;
+}
+
+#mainContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.menuLista {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background: black;
+    border-style: solid;
+    border-color: grey;
+}
+
+button {
+    margin: 5px;
+}
+
+label {
+    color: white;
+}
+
+h1 {
+    color: white;
+}
+
+#discoMenu {
+    display: none;
+}
+
+#peliMenu {
+    display: none;
+}
+
+#buscadores {
+    width: 30%;
+}
+
+#shopMenu {
+    display: flex;
+    flex-direction: row;
+}
+
+.box {
+    margin: 20px;
+}
+
+.inputLista {
+    width: 10% !important;
+}
